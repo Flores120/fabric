@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h4>{{product.title}}</h4>
+  <h4>{{product.cost}}</h4>
+  <p>
+    {{product.description}}
+  </p>
+  <img src={{product.image}} alt={{product.title}} />
+  <br>
+  <button {{action 'addToCart' product}}> Add To Cart</button>
+
+</div>
+{{display-cart}}
