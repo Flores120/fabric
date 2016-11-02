@@ -1,3 +1,6 @@
-{{#each shoppingCart.items as |item|}}
+<h4>Show items in cart</h4>
+
+{{#each shoppingCart.products as |item|}}
   {{item.title}} - {{item.cost}}
+  <br>
 {{/each}}
