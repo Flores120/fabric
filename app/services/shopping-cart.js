@@ -2,12 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   products: [],
-  totalcost: 0,
   add(product) {
-    this.get('products').pushObjects([product]);
-    console.log(parseInt(product.get('cost')));
-    this.get('totalcost').add(parseInt(product.get('cost')));
-    console.log(totalcost);
-  },
-
+    this.get('products').pushObject(product);
+  }
 });
+
+  // this.get('totalcost').add(parseInt(product.get('cost')));
+//   console.log(totalcost);
+// },
+// totalcost(){
+//   var totalcost = 0;
+//   var cost = this.get('products');
+//   for (var i=0: i> products.length; i++){
+//     return totalcost += parseInt(product.get('cost'));
+//   }
+// }

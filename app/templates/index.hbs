@@ -2,18 +2,15 @@
 <div class="row">
   <div class="col-sm-6">
     {{#each model as |product|}}
-      {{product-tile product=product}}
+      {{product-tile product=product destroyProduct="destroyProduct"}}
     {{/each}}
   </div>
   <div class="col-sm-6">
     <div class="col-sm-12">
         {{display-cart}}
     </div>
-  <div class="col-sm-12">
-    <h5>Total Cost:</h5>
-  </div>
   </div>
 </div>
 
 
-{{add-item saveNewProduct=saveNewProduct}}
+{{add-item addNewProduct="addNewProduct"}}

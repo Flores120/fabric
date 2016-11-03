@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  showFormItem: false;
+  showFormItem: false,
   actions: {
     showItemform(){
       this.set('showFormItem', true);
@@ -9,12 +9,13 @@ export default Ember.Component.extend({
     saveNewItem(){
       var params = {
         title: this.get('title'),
-        cost: this.get('cost'),
-        description: this.get('despcription'),
-        image: this.get('image'),
-      },
+        cost: parseInt(this.get('cost')),
+        description: this.get('description'),
+        image: this.get('image')
+      };
+      this.set('showFormItem', false);
       this.sendAction('addNewProduct', params);
-      this.set(showFormItem, false)
+      console.log(params);
     }
   }
 });

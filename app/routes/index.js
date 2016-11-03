@@ -3,13 +3,16 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(){
     return this.store.findAll('items');
-  }
+  },
+  actions: {
   addNewProduct(params){
+    console.log(params);
     var newProduct = this.store.createRecord('items', params);
     newProduct.save();
-    this.transitionTo(index);
+    this.transitionTo('index');
   },
-  destroyProduct(params){
-    return params.destroyRecord();
+  destroyProduct(product){
+     product.destroyRecord();
   }
+}
 });

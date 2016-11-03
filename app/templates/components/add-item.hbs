@@ -1,6 +1,6 @@
 {{#if showFormItem}}
 <div class="container">
-  <form class="" {{action 'saveNewItem' on="submit"}} >
+  <form>
     <div class="form-group">
       <label for="title">Title</label>
       {{input value=title id="title"}}
@@ -17,7 +17,7 @@
       <label for="image">Image</label>
       {{input value=image id="image"}}
     </div>
-    <button type="submit" name="button">Add Item</button>
+    <button {{action 'saveNewItem'}}>Add Item</button>
   </form>
 </div>
 {{else}}
