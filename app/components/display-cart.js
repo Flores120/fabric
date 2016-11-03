@@ -7,15 +7,18 @@ export default Ember.Component.extend({
     var totalcost = 0;
     this.get('shoppingCart.products').forEach(function(product) {
       totalcost += parseInt(product.get('cost'));
-    })
+    });
     return totalcost;
-  })
-
+  }),
+  totalItemCount: Ember.computed('shoppingCart.products.length', function(){
+    var itemCount = this.get('shoppingCart.products.length');
+    return itemCount;
+  }),
+  actions: {
+    remove(product, number){
+      this.get('shoppingCart').remove(product);
+      var number = product.lastIndexOf('product');
+      return number
+    }
+  }
 });
-
-
-// actions: {
-//   addCost(){
-//
-//   }
-// }

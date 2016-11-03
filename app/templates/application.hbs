@@ -1,0 +1,18 @@
+
+  <header class= "jumbotron">
+    <nav class="navbar navbar-inverse top-bar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          {{#link-to 'index' class="navbar-brand"}}<span class="nav-text">E-shop</span>{{/link-to}}
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav">
+                {{#link-to 'index' tagName="li"}}<a href=""><span class="nav-text">Home</span></a>{{/link-to}}
+                {{#link-to 'store' tagName="li"}}<a ><span class="nav-text">Store</span></a>{{/link-to}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  {{outlet}}
+  <hr>

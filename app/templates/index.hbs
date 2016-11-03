@@ -1,16 +1,19 @@
-<h1>Welcome to Fabric</h1>
-<div class="row">
-  <div class="col-sm-6">
-    {{#each model as |product|}}
-      {{product-tile product=product destroyProduct="destroyProduct"}}
-    {{/each}}
-  </div>
-  <div class="col-sm-6">
-    <div class="col-sm-12">
-        {{display-cart}}
+{{add-item addNewProduct="addNewProduct"}}
+
+<div class="container">
+  <h1>Welcome to Fabric</h1>
+  <div class="row">
+    <div class="col-sm-9">
+      {{#each model as |product|}}
+      <div class="col-sm-4">
+          {{product-tile product=product destroyProduct="destroyProduct"}}
+      </div>
+      {{/each}}
+    </div>
+    <div class="col-sm-3">
+      <div class="col-sm-12">
+          {{display-cart}}
+      </div>
     </div>
   </div>
 </div>
-
-
-{{add-item addNewProduct="addNewProduct"}}

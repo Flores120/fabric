@@ -1,13 +1,10 @@
-<div class="jumbotron">
-  <form>
-    <h4>{{product.title}}</h4>
-    <h4>{{product.cost}}</h4>
-    <p>
-      {{product.description}}
-    </p>
-    <img src={{product.image}} alt={{product.title}} />
-    <br>
-    <button {{action 'addToCart' product}}> Add To Cart</button>
-  </form>
-  <button {{action 'destroyProduct' product}}>Delete</button>
-</div>
+<form>
+  {{#link-to 'store' store.id}}
+  <h4>{{product.title}}</h4>
+  {{/link-to}}
+  <h4>${{product.cost}}</h4>
+  <img src={{product.image}} alt={{product.title}} />
+  <br>
+  <button {{action 'addToCart' product}}>Add To Cart</button>
+</form>
+<button {{action 'destroyProduct' product}}>Delete</button>
